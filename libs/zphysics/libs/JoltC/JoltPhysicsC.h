@@ -1524,6 +1524,9 @@ JPC_BodyInterface_AddAngularImpulse(JPC_BodyInterface *in_iface, JPC_BodyID in_b
 
 JPC_API void
 JPC_BodyInterface_SetMotionType(JPC_BodyInterface *in_iface, JPC_BodyID in_body_id, JPC_MotionType motion_type, JPC_Activation activation);
+
+JPC_API void
+JPC_BodyInterface_SetObjectLayer(JPC_BodyInterface *in_iface, JPC_BodyID in_body_id, JPC_ObjectLayer in_object_layer);
 //--------------------------------------------------------------------------------------------------
 //
 // JPC_Body

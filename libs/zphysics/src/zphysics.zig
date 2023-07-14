@@ -1572,6 +1572,14 @@ pub const BodyInterface = opaque {
             @intFromEnum(in_activation_type),
         );
     }
+
+    pub fn setObjectLayer(body_iface: *BodyInterface, body_id: BodyId, layer: ObjectLayer) void {
+        return c.JPC_BodyInterface_SetObjectLayer(
+            @as(*c.JPC_BodyInterface, @ptrCast(body_iface)),
+            body_id,
+            @as(c.JPC_ObjectLayer, @intCast(layer)),
+        );
+    }
 };
 //--------------------------------------------------------------------------------------------------
 //

@@ -1962,6 +1962,12 @@ JPC_BodyInterface_SetMotionType(JPC_BodyInterface *in_iface, JPC_BodyID in_body_
     toJph(in_iface)->SetMotionType(toJph(in_body_id), static_cast<JPH::EMotionType>(in_motion_type), static_cast<JPH::EActivation>(in_activation));
 }
 //--------------------------------------------------------------------------------------------------
+JPC_API void
+JPC_BodyInterface_SetObjectLayer(JPC_BodyInterface *in_iface, JPC_BodyID in_body_id, JPC_ObjectLayer in_object_layer)
+{
+    toJph(in_iface)->SetObjectLayer(toJph(in_body_id), in_object_layer);
+}
+//--------------------------------------------------------------------------------------------------
 //
 // JPC_Body
 //
