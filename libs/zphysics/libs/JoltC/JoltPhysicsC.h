@@ -582,6 +582,8 @@ typedef struct JPC_RayCastSettings
     bool             treat_convex_as_solid;
 } JPC_RayCastSettings;
 
+typedef struct JPC_Plane { float normal_and_offset[4]; } JPC_Plane;
+
 #if JPC_DEBUG_RENDERER == 1
 // NOTE: Needs to be kept in sync with JPH::AABox
 typedef struct JPC_AABox
@@ -1588,6 +1590,9 @@ JPC_Shape_GetCenterOfMass(const JPC_Shape *in_shape, JPC_Real out_position[3]);
 // JPC_ConvexHullShape
 //
 //--------------------------------------------------------------------------------------------------
+JPC_API size_t // returns size of planes array
+JPC_ConvexHullShape_GetPlanesPtr(const JPC_ConvexHullShape *in_shape, const JPC_Plane **out_array);
+
 JPC_API uint32_t
 JPC_ConvexHullShape_GetNumPoints(const JPC_ConvexHullShape *in_shape);
 

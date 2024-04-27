@@ -1848,6 +1848,18 @@ JPC_Shape_GetCenterOfMass(const JPC_Shape *in_shape, JPC_Real out_position[3])
 // JPC_ConvexHullShape
 //
 //--------------------------------------------------------------------------------------------------
+JPC_API size_t // returns size of planes array
+JPC_ConvexHullShape_GetPlanesPtr(const JPC_ConvexHullShape *in_shape, const JPC_Plane **out_array)
+{
+    auto &planes = toJph(in_shape)->GetPlanes();
+    if (planes.empty()) {
+        (*out_array) = nullptr;
+        return 0;
+    }
+    (*out_array) = reinterpret_cast<const JPC_Plane*>(planes.data());
+    return planes.size();
+}
+//--------------------------------------------------------------------------------------------------
 JPC_API uint32_t
 JPC_ConvexHullShape_GetNumPoints(const JPC_ConvexHullShape *in_shape)
 {

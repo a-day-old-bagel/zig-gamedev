@@ -3209,6 +3209,19 @@ pub const ConvexHullShape = opaque {
         return @as(*ConvexHullShape, @ptrCast(shape));
     }
 
+    /// First three elements of a plane are the normal, fourth element is the offset.
+    pub fn getPlanes(shape: *const ConvexHullShape) ?[]const [4]f32 {
+        var ptr: ?[*]const [4]f32 = null;
+        const len = c.JPC_ConvexHullShape_GetPlanesPtr(
+            @as(*const c.JPC_ConvexHullShape, @ptrCast(shape)),
+            @as(*?[*]const c.JPC_Plane, @ptrCast(&ptr)),
+        );
+        if (ptr) |array| {
+            return array[0..len];
+        }
+        return null;
+    }
+
     pub fn getNumPoints(shape: *const ConvexHullShape) u32 {
         return c.JPC_ConvexHullShape_GetNumPoints(@as(*const c.JPC_ConvexHullShape, @ptrCast(shape)));
     }
