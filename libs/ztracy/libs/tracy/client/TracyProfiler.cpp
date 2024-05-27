@@ -281,11 +281,11 @@ struct ThreadHandleWrapper
 static inline void CpuId( uint32_t* regs, uint32_t leaf )
 {
     memset(regs, 0, sizeof(uint32_t) * 4);
-#if defined _WIN32
-    __cpuidex( (int*)regs, leaf, 0 );
-#else
+//#if defined _WIN32
+//    __cpuidex( (int*)regs, leaf, 0 );
+//#else
     __get_cpuid( leaf, regs, regs+1, regs+2, regs+3 );
-#endif
+//#endif
 }
 
 static void InitFailure( const char* msg )
