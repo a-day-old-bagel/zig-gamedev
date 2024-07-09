@@ -703,7 +703,6 @@ namespace IMGUIZMO_NAMESPACE
 
       bool mbUsing;
       bool mbEnable;
-      bool mbMouseOver;
       bool mReversed; // reversed projection matrix
 
       // translation
@@ -923,19 +922,6 @@ namespace IMGUIZMO_NAMESPACE
       return IsWithin(p.x, gContext.mX, gContext.mXMax) && IsWithin(p.y, gContext.mY, gContext.mYMax);
    }
 
-   static bool IsHoveringWindow()
-   {
-      ImGuiContext& g = *ImGui::GetCurrentContext();
-      ImGuiWindow* window = ImGui::FindWindowByName(gContext.mDrawList->_OwnerName);
-      if (g.HoveredWindow == window)   // Mouse hovering drawlist window
-         return true;
-      if (g.HoveredWindow != NULL)     // Any other window is hovered
-         return false;
-      if (ImGui::IsMouseHoveringRect(window->InnerRect.Min, window->InnerRect.Max, false))   // Hovering drawlist window rect, while no other window is hovered (for _NoInputs windows)
-         return true;
-      return false;
-   }
-
    void SetRect(float x, float y, float width, float height)
    {
       gContext.mX = x;
@@ -1039,7 +1025,6 @@ namespace IMGUIZMO_NAMESPACE
       gContext.mMode = mode;
       gContext.mViewMat = *(matrix_t*)view;
       gContext.mProjectionMat = *(matrix_t*)projection;
-      gContext.mbMouseOver = IsHoveringWindow();
 
       gContext.mModelLocal = *(matrix_t*)matrix;
       gContext.mModelLocal.OrthoNormalize();
@@ -1609,7 +1594,7 @@ namespace IMGUIZMO_NAMESPACE
 
    static bool CanActivate()
    {
-      if (ImGui::IsMouseClicked(0) && !ImGui::IsAnyItemHovered() && !ImGui::IsAnyItemActive())
+      if (ImGui::IsMouseClicked(0) && !ImGui::IsAnyItemActive())
       {
          return true;
       }
@@ -2027,7 +2012,7 @@ namespace IMGUIZMO_NAMESPACE
 
    static int GetMoveType(OPERATION op, vec_t* gizmoHitProportion)
    {
-      if(!Intersects(op, TRANSLATE) || gContext.mbUsing || !gContext.mbMouseOver)
+      if(!Intersects(op, TRANSLATE) || gContext.mbUsing)
       {
         return MT_NONE;
       }
@@ -2205,7 +2190,7 @@ namespace IMGUIZMO_NAMESPACE
 
    static bool HandleScale(float* matrix, float* deltaMatrix, OPERATION op, int& type, const float* snap)
    {
-      if((!Intersects(op, SCALE) && !Intersects(op, SCALEU)) || type != MT_NONE || !gContext.mbMouseOver)
+      if((!Intersects(op, SCALE) && !Intersects(op, SCALEU)) || type != MT_NONE)
       {
          return false;
       }
@@ -2326,7 +2311,7 @@ namespace IMGUIZMO_NAMESPACE
 
    static bool HandleRotation(float* matrix, float* deltaMatrix, OPERATION op, int& type, const float* snap)
    {
-      if(!Intersects(op, ROTATE) || type != MT_NONE || !gContext.mbMouseOver)
+      if(!Intersects(op, ROTATE) || type != MT_NONE)
       {
         return false;
       }
@@ -2882,7 +2867,7 @@ namespace IMGUIZMO_NAMESPACE
                bool insidePanel = localx > panelCorners[0].x && localx < panelCorners[1].x && localy > panelCorners[0].y && localy < panelCorners[1].y;
                int boxCoordInt = int(boxCoord.x * 9.f + boxCoord.y * 3.f + boxCoord.z);
                IM_ASSERT(boxCoordInt < 27);
-               boxes[boxCoordInt] |= insidePanel && (!isDraging) && gContext.mbMouseOver;
+               boxes[boxCoordInt] |= insidePanel && (!isDraging);
 
                // draw face with lighter color
                if (iPass)
@@ -2917,7 +2902,7 @@ namespace IMGUIZMO_NAMESPACE
          vec_t newEye = camTarget + newDir * length;
          LookAt(&newEye.x, &camTarget.x, &newUp.x, view);
       }
-      isInside = gContext.mbMouseOver && ImRect(position, position + size).Contains(io.MousePos);
+      isInside = ImRect(position, position + size).Contains(io.MousePos);
 
       if (io.MouseDown[0] && (fabsf(io.MouseDelta[0]) || fabsf(io.MouseDelta[1])) && isClicking)
       {
