@@ -161,6 +161,7 @@ namespace IMGUIZMO_NAMESPACE
    IMGUI_API void SetRect(float x, float y, float width, float height);
    // default is false
    IMGUI_API void SetOrthographic(bool isOrthographic);
+   IMGUI_API void SetOwnerWindowName(const char* newOwnerWindowName);
 
    // Render a cube with face color corresponding to face normal. Usefull for debug/tests
    IMGUI_API void DrawCubes(const float* view, const float* projection, const float* matrices, int matrixCount);

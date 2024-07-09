@@ -761,6 +761,9 @@ namespace IMGUIZMO_NAMESPACE
 
       bool mAllowAxisFlip = true;
       float mGizmoSizeClipSpace = 0.1f;
+
+      const char gizmoWindowName[6] = "gizmo";
+      char ownerWindowName[1024] = "gizmo";
    };
 
    static Context gContext;
@@ -926,7 +929,7 @@ namespace IMGUIZMO_NAMESPACE
    static bool IsHoveringWindow()
    {
       ImGuiContext& g = *ImGui::GetCurrentContext();
-      ImGuiWindow* window = ImGui::FindWindowByName(gContext.mDrawList->_OwnerName);
+      ImGuiWindow* window = ImGui::FindWindowByName(gContext.ownerWindowName);
       if (g.HoveredWindow == window)   // Mouse hovering drawlist window
          return true;
       if (g.HoveredWindow != NULL)     // Any other window is hovered
@@ -952,7 +955,12 @@ namespace IMGUIZMO_NAMESPACE
       gContext.mIsOrthographic = isOrthographic;
    }
 
-   void SetDrawlist(ImDrawList* drawlist)
+   void SetOwnerWindowName(const char* newOwnerWindowName)
+   {
+      strcpy(gContext.ownerWindowName, newOwnerWindowName);
+   }
+
+    void SetDrawlist(ImDrawList* drawlist)
    {
       gContext.mDrawList = drawlist ? drawlist : ImGui::GetWindowDrawList();
    }
@@ -979,7 +987,7 @@ namespace IMGUIZMO_NAMESPACE
       ImGui::PushStyleColor(ImGuiCol_Border, 0);
       ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
 
-      ImGui::Begin("gizmo", NULL, flags);
+      ImGui::Begin(gContext.gizmoWindowName, NULL, flags);
       gContext.mDrawList = ImGui::GetWindowDrawList();
       ImGui::End();
       ImGui::PopStyleVar();

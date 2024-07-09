@@ -2615,6 +2615,10 @@ ZGUI_API void zguiGizmo_SetOrthographic(bool isOrthographic) {
     ImGuizmo::SetOrthographic(isOrthographic);
 }
 
+ZGUI_API void zguiGizmo_SetOwnerWindowName(const char *newOwnerWindowName) {
+    ImGuizmo::SetOwnerWindowName(newOwnerWindowName);
+}
+
 ZGUI_API void zguiGizmo_DrawCubes(const float* view, const float* projection, const float* matrices, int matrixCount) {
     ImGuizmo::DrawCubes(view, projection, matrices, matrixCount);
 }

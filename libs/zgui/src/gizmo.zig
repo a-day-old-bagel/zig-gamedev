@@ -140,6 +140,10 @@ pub fn setOrthographic(is_orthographic: bool) void {
     zguiGizmo_SetOrthographic(is_orthographic);
 }
 
+pub fn setOwnerWindowName(name: [:0]const u8) void {
+    zguiGizmo_SetOwnerWindowName(name);
+}
+
 pub fn drawCubes(view: *const Matrix, projection: *const Matrix, matrices: []const Matrix) void {
     zguiGizmo_DrawCubes(&view[0], &projection[0], &matrices[0][0], @as(i32, @intCast(matrices.len)));
 }
@@ -258,6 +262,7 @@ extern fn zguiGizmo_RecomposeMatrixFromComponents(
 ) void;
 extern fn zguiGizmo_SetRect(x: f32, y: f32, width: f32, height: f32) void;
 extern fn zguiGizmo_SetOrthographic(is_orthographic: bool) void;
+extern fn zguiGizmo_SetOwnerWindowName(name: ?[*:0]const u8) void;
 extern fn zguiGizmo_DrawCubes(view: *const f32, projection: *const f32, matrices: *const f32, matrix_count: i32) void;
 extern fn zguiGizmo_DrawGrid(view: *const f32, projection: *const f32, matrix: *const f32, grid_size: f32) void;
 extern fn zguiGizmo_Manipulate(
