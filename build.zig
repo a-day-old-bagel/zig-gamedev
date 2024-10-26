@@ -177,11 +177,6 @@ fn buildAndInstallSamples(b: *std.Build, options: anytype, comptime samples: any
     inline for (comptime std.meta.declarations(samples)) |d| {
         const exe = @field(samples, d.name).build(b, options);
 
-        // TODO: Problems with LTO on Windows.
-        if (exe.rootModuleTarget().os.tag == .windows) {
-            exe.want_lto = false;
-        }
-
         if (exe.root_module.optimize != .Debug) {
             exe.root_module.strip = true;
         }

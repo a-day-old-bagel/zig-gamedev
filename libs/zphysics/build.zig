@@ -234,11 +234,6 @@ pub fn build(b: *std.Build) void {
     });
     b.installArtifact(tests);
 
-    // TODO: Problems with LTO on Windows.
-    if (target.result.os.tag == .windows) {
-        tests.want_lto = false;
-    }
-
     tests.addCSourceFile(.{
         .file = b.path("libs/JoltC/JoltPhysicsC_Tests.c"),
         .flags = &.{

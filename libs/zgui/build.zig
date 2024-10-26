@@ -222,7 +222,6 @@ pub fn build(b: *std.Build) void {
                 .optimize = optimize,
                 .target = target,
             });
-            winpthreads.want_lto = false;
             winpthreads.root_module.sanitize_c = false;
             if (optimize == .Debug or optimize == .ReleaseSafe)
                 winpthreads.bundle_compiler_rt = true
