@@ -15,7 +15,7 @@
 	url = git@github.com:zig-gamedev/zglfw.git
 [submodule "libs/zgpu"]
 	path = libs/zgpu
-	url = git@github.com:zig-gamedev/zgpu.git
+	url = git@github.com:a-day-old-bagel/zgpu.git
 [submodule "libs/zgui"]
 	path = libs/zgui
 	url = git@github.com:zig-gamedev/zgui.git
