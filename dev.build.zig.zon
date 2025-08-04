@@ -31,7 +31,7 @@
 
         .zgpu = .{ .path = "libs/zgpu" },
         .zdawn_x86_64_windows_gnu = .{
-            .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/f3ca53a31d90f3b590bf57e7c015c2e0109c7683.tar.gz",
+            .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/dffdb96a43ad3e24cd4a56949bb03fdd3fcf95b3.tar.gz",
             .hash = "N-V-__8AACTslAM8rYKe4WpKOW7hADa5v5epccQ4thv2B6We",
             .lazy = true,
         },

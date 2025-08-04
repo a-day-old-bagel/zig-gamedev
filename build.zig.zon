@@ -48,11 +48,11 @@
         },
 
         .zgpu = .{
-            .url = "https://github.com/a-day-old-bagel/zgpu/archive/c20561486b4358789472fb649fbc70c3ec3a8f5e.tar.gz",
+            .url = "https://github.com/a-day-old-bagel/zgpu/archive/5f31b60ed16370549b2a4084fc2a8382af58dacd.tar.gz",
             .hash = "zgpu-0.14.0-dev-nqFT5I7KBgDxCnl5k3dF08Ck9voKckP26osUmAC0Vmel",
         },
         .zdawn_x86_64_windows_gnu = .{
-            .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/f3ca53a31d90f3b590bf57e7c015c2e0109c7683.tar.gz",
+            .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/dffdb96a43ad3e24cd4a56949bb03fdd3fcf95b3.tar.gz",
             .hash = "N-V-__8AACTslAM8rYKe4WpKOW7hADa5v5epccQ4thv2B6We",
             .lazy = true,
         },
@@ -78,7 +78,7 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/a-day-old-bagel/zgui/archive/f021b1c89c50fa78b15f043f845ea7668da5f98a.tar.gz",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/b6d3ccf698ee259012cf591d38d98220fbbb062a.tar.gz",
             .hash = "zgui-0.6.0-dev--L6sZAraaACAb9-GMlQizU-deWlgCQDAJEq0hXzfSYnW",
         },
 
