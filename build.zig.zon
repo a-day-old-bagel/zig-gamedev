@@ -78,7 +78,7 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/a-day-old-bagel/zgui/archive/896022e0f7c2bd3faa45446d8972a9ff7ac99b03.tar.gz",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/f021b1c89c50fa78b15f043f845ea7668da5f98a.tar.gz",
             .hash = "zgui-0.6.0-dev--L6sZAraaACAb9-GMlQizU-deWlgCQDAJEq0hXzfSYnW",
         },
 
