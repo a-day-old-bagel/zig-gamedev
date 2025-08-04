@@ -48,8 +48,8 @@
         },
 
         .zgpu = .{
-            .url = "https://github.com/zig-gamedev/zgpu/archive/d860e2b4a333cacffb168fab49a233c5d2f1bca2.tar.gz",
-            .hash = "zgpu-0.12.0-dev-nqFT5EKgCADkhwAf97_pfSOmPWEguKmljSECs9ihpFS7",
+            .url = "https://github.com/a-day-old-bagel/zgpu/archive/cc10cbeaa6e302f715fa7f5fe6bb51fc0c2788d6.tar.gz",
+            .hash = "zgpu-0.14.0-dev-nqFT5I7KBgDxCnl5k3dF08Ck9voKckP26osUmAC0Vmel",
         },
         .zdawn_x86_64_windows_gnu = .{
             .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/f3ca53a31d90f3b590bf57e7c015c2e0109c7683.tar.gz",
@@ -78,8 +78,8 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/zig-gamedev/zgui/archive/b1c775da1f14d9dbeadc22243a11f7342bf59a51.tar.gz",
-            .hash = "zgui-0.6.0-dev--L6sZC-1aADzgrip50BHiYDaCwSMC04XWK0epNlQD6Dt",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/c20561486b4358789472fb649fbc70c3ec3a8f5e.tar.gz",
+            .hash = "zgui-0.6.0-dev--L6sZAraaACAb9-GMlQizU-deWlgCQDAJEq0hXzfSYnW",
         },
 
         .zjobs = .{

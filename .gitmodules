@@ -18,7 +18,7 @@
 	url = git@github.com:a-day-old-bagel/zgpu.git
 [submodule "libs/zgui"]
 	path = libs/zgui
-	url = git@github.com:zig-gamedev/zgui.git
+	url = git@github.com:a-day-old-bagel/zgui.git
 [submodule "libs/zjobs"]
 	path = libs/zjobs
 	url = git@github.com:zig-gamedev/zjobs.git
