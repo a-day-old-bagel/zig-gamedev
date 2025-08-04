@@ -48,12 +48,12 @@
         },
 
         .zgpu = .{
-            .url = "https://github.com/a-day-old-bagel/zgpu/archive/5f31b60ed16370549b2a4084fc2a8382af58dacd.tar.gz",
-            .hash = "zgpu-0.14.0-dev-nqFT5I7KBgDxCnl5k3dF08Ck9voKckP26osUmAC0Vmel",
+            .url = "https://github.com/a-day-old-bagel/zgpu/archive/e37b972e312c1934d21c6a49310d3460a5cdaf8e.tar.gz",
+            .hash = "zgpu-0.14.0-dev-nqFT5MnJBgDg73mxdJBQxOcjbJkkDSDw3FdvwEMpUfhh",
         },
         .zdawn_x86_64_windows_gnu = .{
             .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/dffdb96a43ad3e24cd4a56949bb03fdd3fcf95b3.tar.gz",
-            .hash = "N-V-__8AACTslAM8rYKe4WpKOW7hADa5v5epccQ4thv2B6We",
+            .hash = "N-V-__8AAAoJ8AF1BpWg4V68pUlEOKxApxVRhuQEN2etL9K8",
             .lazy = true,
         },
         .dawn_x86_64_linux_gnu = .{
@@ -78,8 +78,8 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/a-day-old-bagel/zgui/archive/b6d3ccf698ee259012cf591d38d98220fbbb062a.tar.gz",
-            .hash = "zgui-0.6.0-dev--L6sZAraaACAb9-GMlQizU-deWlgCQDAJEq0hXzfSYnW",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/b85f9a7ba412265b2541ae0867704019f1903b10.tar.gz",
+            .hash = "zgui-0.6.0-dev--L6sZHvAbAAnaiyng3tAkN3oYESs0zfdzORkg8tVTxKg",
         },
 
         .zjobs = .{
