@@ -48,17 +48,17 @@
         },
 
         .zgpu = .{
-            .url = "https://github.com/a-day-old-bagel/zgpu/archive/1e52b10d8c374626f3e8c63158b1ce8b9ef97a61.tar.gz",
-            .hash = "zgpu-0.14.0-dev-nqFT5PPMBgC-6vvTwmxubnkb9-Kx7QJvbrCTQlWUHDfh",
+            .url = "https://github.com/a-day-old-bagel/zgpu/archive/023238df615369e961dfb0176ef37bd49f12cd48.tar.gz",
+            .hash = "zgpu-0.14.0-dev-nqFT5CXNBgAp9aRCRhwyQXWsAj3LClv1nIpOSkdjHRSy",
         },
         .zdawn_x86_64_windows_gnu = .{
-            .url = "https://github.com/a-day-old-bagel/libzdawn-x86_64-windows-gnu/archive/dffdb96a43ad3e24cd4a56949bb03fdd3fcf95b3.tar.gz",
-            .hash = "N-V-__8AAAoJ8AF1BpWg4V68pUlEOKxApxVRhuQEN2etL9K8",
+            .url = "https://github.com/a-day-old-bagel/libzdawn-binaries/archive/6f4aa6f43f79eb200b0c865907f62a8a95310786.tar.gz",
+            .hash = "zdawn_x86_64_windows_gnu-0.14.0-dev-3fGi06kj7AGhszK_2GGSLYhxe8AAI3h8NgrREPQxdjZy",
             .lazy = true,
         },
-        .dawn_x86_64_linux_gnu = .{
-            .url = "https://github.com/michal-z/webgpu_dawn-x86_64-linux-gnu/archive/7d70db023bf254546024629cbec5ee6113e12a42.tar.gz",
-            .hash = "N-V-__8AAK7XUQNKNRnv1J6i189jtURJKjp3HTftoyD4Y4CB",
+        .zdawn_x86_64_linux_gnu = .{
+            .url = "https://github.com/a-day-old-bagel/libzdawn-binaries/archive/83a7c48136bef8bf7f54586f6a2444a627509679.tar.gz",
+            .hash = "zdawn_x86_64_linux_gnu-0.14.0-dev-uKseL9PnvAL-jlweix9fqtXH2M1Knu9oA8Aznjv6XwnG",
             .lazy = true,
         },
         .dawn_aarch64_linux_gnu = .{
@@ -78,8 +78,8 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/a-day-old-bagel/zgui/archive/9ac94e95ad40c4d9931b86c19e30eeeddeae1ff8.tar.gz",
-            .hash = "zgui-0.6.0-dev--L6sZHvAbABtCi1LgRIPuseWcLNS900qEEQ3O5h8EuDw",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/02291b06180c19415904ebf09011028ea54d7d0b.tar.gz",
+            .hash = "zgui-0.6.0-dev--L6sZHvAbABDrmUoKTWjkGFwrmFCJONO7gU_l6hkyVJz",
         },
 
         .zjobs = .{
