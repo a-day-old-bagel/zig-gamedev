@@ -78,8 +78,8 @@
         },
 
         .zgui = .{
-            .url = "https://github.com/a-day-old-bagel/zgui/archive/02291b06180c19415904ebf09011028ea54d7d0b.tar.gz",
-            .hash = "zgui-0.6.0-dev--L6sZHvAbABDrmUoKTWjkGFwrmFCJONO7gU_l6hkyVJz",
+            .url = "https://github.com/a-day-old-bagel/zgui/archive/3bd1cb00dc4fdbe2be3e33224abd340e7dd71857.tar.gz",
+            .hash = "zgui-0.6.0-dev--L6sZLDBbABEo15JVGMHKd-Cot_7BmgejCAsedzGmfdL",
         },
 
         .zjobs = .{
